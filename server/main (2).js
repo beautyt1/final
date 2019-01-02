@@ -57,7 +57,7 @@ var weatherInfo = function(msg) {
 };
 
 var sayHello = function(msg) {
-	let helloRegex = /.*(hi|hello|hey|how are you).*/i;
+	let helloRegex = /\bhi\b|hello|hey|how are you.*/i;
 	let helloRequest = msg.match(helloRegex);
 	if(helloRequest === null) {
 		return "";
@@ -121,7 +121,7 @@ var YesReply = function(msg) {
 };
 
 var NoReply = function(msg) {
-	let NoRegex = /no/i;
+	let NoRegex = /\bno\b/i;
 	let NoRequest = msg.match(NoRegex);
 	if(NoRequest === null) {
 		return "";
