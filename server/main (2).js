@@ -202,7 +202,7 @@ var finalIsDifficult = function(msg){
 };
 
 var finalIsOk = function(msg){
-	let finalRegex = /ok|good|great|fine|not bad/i;
+	let finalRegex = /\bok\b|good|great|fine|not bad/i;
 	let finalRequest = msg.match(finalRegex);
 	if (finalRequest === null){
 		return "";
