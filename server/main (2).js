@@ -101,8 +101,6 @@ var YesReply = function(msg) {
 		return "";
 	}
 	else {
-		let randomIndex = Math.random()*10;
-		randomIndex = Math.floor(randomIndex);
 		let YesResponse = 
 			[
 				"Yes or No",
@@ -110,12 +108,9 @@ var YesReply = function(msg) {
 				"Nice. I agree with you!",
 				"OK.Then do you want today's weather?",
 				"YES or YES (〃∀〃)" ,
-				"Yes or No",
-				"Good.Then What else do you want to know?",
-				"Nice. I agree with you!",
-				"OK.Then do you want today's weather?",
-				"YES or YES (〃∀〃)" 
 			];
+		let randomIndex = Math.random()*YesResponse.length;
+		randomIndex = Math.floor(randomIndex);
 		return YesResponse[randomIndex];
 	}
 };
@@ -126,9 +121,7 @@ var NoReply = function(msg) {
 	if(NoRequest === null) {
 		return "";
 	}
-	else {
-		let randomIndex = Math.random()*10;
-		randomIndex = Math.floor(randomIndex);
+	else {		
 		let NoResponse = 
 			[
 				"Can't say no!",
@@ -137,13 +130,9 @@ var NoReply = function(msg) {
 				"Bye",
 				"OK.see you later",
 				"OK. Then what do you want to know?",
-				"Can't say no! ",
-				"Yes Yes Yes Yes Yes",
-				"OK.",
-				"Bye",
-				"OK.see you later",
-				"OK. Then what do you want to know?"
 			];
+		let randomIndex = Math.random()*NoResponse.length;
+		randomIndex = Math.floor(randomIndex);	
 		return NoResponse[randomIndex];
 	}
 };
