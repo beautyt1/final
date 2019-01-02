@@ -327,6 +327,12 @@ Meteor.methods({
 			if(ELIZAResponse === ""){
 				ELIZAResponse = sayGoodBye(msg);
 			}
+			if(ELIZAResponse === "") {
+				ELIZAResponse = YesReply(msg);
+			}
+			if(ELIZAResponse === "") {
+				ELIZAResponse = NoReply(msg);
+			}
 			if(ELIZAResponse === ""){
 				ELIZAResponse = insultedAnger(msg);
 			}
@@ -335,12 +341,6 @@ Meteor.methods({
 			}
 			if(ELIZAResponse === "") {
 				ELIZAResponse = finalIsOk(msg);
-			}
-			if(ELIZAResponse === "") {
-				ELIZAResponse = YesReply(msg);
-			}
-			if(ELIZAResponse === "") {
-				ELIZAResponse = NoReply(msg);
 			}
 			if(ELIZAResponse === "") {
 				ELIZAResponse = finalIsDifficult(msg);
