@@ -210,7 +210,9 @@ var finalIsOk = function(msg){
 	else {
 		let randomIndex = Math.random()*10;
 		randomIndex = Math.floor(randomIndex);
-		let finalResponse = ["That's good(ゝ∀･)",
+		let finalResponse = 
+		    	[
+				"That's good(ゝ∀･)",
 				"You're as good as me!",
 				"Keep Going!",
 				"You must be very hard-working~",
@@ -220,7 +222,7 @@ var finalIsOk = function(msg){
 				"Oh That's sounds great! Give you a thumbs-up d(`･∀･)b",
 				"Go！ Fight！ Win！",
 				"Nice! Give you a heart(*´∀`)~♥"
-				];
+			];
 		return finalResponse[randomIndex];
 	}
 };
