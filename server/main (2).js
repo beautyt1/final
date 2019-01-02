@@ -82,6 +82,18 @@ var sayHello = function(msg) {
 	}
 };
 
+var sayGoodBye = function(msg) {
+	let GoodByeRegex = /bye/i;
+	let GoodByeRequest = msg.match(GoodByeRegex);
+	if(GoodByeRequest === null) {
+		return "";
+	}
+	else {
+		let GoodByeResponse = "Goodbye!"
+		return GoodByeResponse;
+	}
+};
+
 var YesReply = function(msg) {
 	let YesRegex = /yes/i;
 	let YesRequest = msg.match(YesRegex);
@@ -311,6 +323,9 @@ Meteor.methods({
 			*/
 			if(ELIZAResponse === ""){
 				ELIZAResponse = sayHello(msg);
+			}
+			if(ELIZAResponse === ""){
+				ELIZAResponse = sayGoodBye(msg);
 			}
 			if(ELIZAResponse === ""){
 				ELIZAResponse = insultedAnger(msg);
