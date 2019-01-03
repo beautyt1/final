@@ -69,7 +69,7 @@ var sayHello = function(msg) {
 			[
 				"Hi. How's your final?",
 				"Hello. How's your final?",
-				"Nice to meet you.Well...How's your final?",
+				"Nice to meet you. Well...How's your final?",
 				"Hey~How's your final?",
 				"Oh! I’m so happy to see you!How's your final?",
 				"Heyllo. This is my language. How's your final?",
@@ -103,7 +103,7 @@ var YesReply = function(msg) {
 	else {
 		let YesResponse = 
 			[
-				"Yes or No",
+				"Alright!Let's talk about the weather in your city.",
 				"Good.Then What else do you want to know?",
 				"Nice. I agree with you!",
 				"OK.Then do you want today's weather?",
@@ -126,9 +126,9 @@ var NoReply = function(msg) {
 			[
 				"Can't say no!",
 				"Yes Yes Yes Yes Yes",
-				"OK.",
-				"Bye",
-				"OK.see you later",
+				"Um. Don't be so mean, ok?",
+				"Alright. Talk to me...when you need my help.",
+				"OK, see you later",
 				"OK. Then what do you want to know?",
 			];
 		let randomIndex = Math.random()*NoResponse.length;
@@ -186,15 +186,15 @@ var finalIsDifficult = function(msg){
 		randomIndex = Math.floor(randomIndex);
 		let finalResponse = 
 			[
-				"gg why not ask for felp? May be I can help you(ゝ∀･)",
-				"poor you, can you pass the exam?",
+				"gg why don't you ask for felp? Maybe I can help you(ゝ∀･)",
+				"Poor you, can you pass the exam?",
 				"Keep Going! You can ask me question~ I can teach you",
 				"Take care~",
 				"Go get A+!!I am~",
 				"頑張ってー(๑•̀ㅂ•́)و✧",
 				"Fighting!!＼＼٩( 'ω' )و ／／ ",
 				"......you can take your winter vacation Right now!ヽ( ° ▽°)ノ ",
-				"That's sad.",
+				"That's sad. Don't worry.",
 				"It's OK. I failed, too."
 			];
 		return finalResponse[randomIndex];
@@ -202,7 +202,7 @@ var finalIsDifficult = function(msg){
 };
 
 var finalIsOk = function(msg){
-	let finalRegex = /\bok\b|good|great|fine|not bad/i;
+	let finalRegex = /\bok\b|good|great|fine|not bad|alright/i;
 	let finalRequest = msg.match(finalRegex);
 	if (finalRequest === null){
 		return "";
@@ -219,7 +219,7 @@ var finalIsOk = function(msg){
 				"Good for you!",
 				"WOW That's good! Good luck~",
 				"Well done! You are a good student, aren't you?",
-				"Oh That's sounds great! Give you a thumbs-up d(`･∀･)b",
+				"Oh That sounds great! Give you a thumbs-up d(`･∀･)b",
 				"Go！ Fight！ Win！",
 				"Nice! Give you a heart(*´∀`)~♥"
 			];
